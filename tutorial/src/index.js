@@ -49,55 +49,93 @@ import "./index.css";
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<BookList />);
 
-const firstbook = {
-  image: "./Images/Book-1.jpg",
-  title: "Gopi Diaries: Coming Home ",
-  author: "Sudha Moorthy",
-};
+// const firstbook = {
+//   image: "./Images/Book-1.jpg",
+//   title: "Gopi Diaries: Coming Home ",
+//   author: "Sudha Moorthy",
+// };
 
-const secondbook = {
-  image: "https://m.media-amazon.com/images/I/51t6lNaTw5L._SY445_SX342_.jpg",
-  title: "The fowl twins ",
-  author: "Eion colfer",
-};
-const BookList = () => {
-  return (
-    <section className="BookList">
-      <Book>
-        author={firstbook.author}
-        title={firstbook.title}
-        image={firstbook.image}
-        {
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-            quibusdam laudantium tenetur? Doloremque, voluptates delectus
-            accusamus natus provident illum consequuntur. Adipisci eligendi sed
-            tempora cum odit, quidem voluptatibus architecto possimus!
-          </p>
-        }
-      </Book>
-      <Book
-        author={secondbook.author}
-        title={secondbook.title}
-        image={secondbook.image}
-      />
-    </section>
-  );
-};
+// const secondbook = {
+//   image: "https://m.media-amazon.com/images/I/51t6lNaTw5L._SY445_SX342_.jpg",
+//   title: "The fowl twins ",
+//   author: "Eion colfer",
+// };
+// const BookList = () => {
+//   return (
+//     <section className="BookList">
+//       <Book>
+//         author={firstbook.author}
+//         title={firstbook.title}
+//         image={firstbook.image}
+//         {
+//           <p>
+//             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+//             quibusdam laudantium tenetur? Doloremque, voluptates delectus
+//             accusamus natus provident illum consequuntur. Adipisci eligendi sed
+//             tempora cum odit, quidem voluptatibus architecto possimus!
+//           </p>
+//         }
+//       </Book>
+//       <Book
+//         author={secondbook.author}
+//         title={secondbook.title}
+//         image={secondbook.image}
+//       />
+//     </section>
+//   );
+// };
+// // const Book = (props) => {
+// //   return (
+// //     <article className="Book">
+// //       <img src={props.image} alt={props.title} />
+// //       <h2>{props.title}</h2>
+// //       <h4>{props.author}</h4>
+// //     </article>
+// //   );
+// // };
+
+// // destructuring in props
 // const Book = (props) => {
+//   // const Book = ({ image, title, author }) => { return ()
+//   const { image, title, author, children } = props;
 //   return (
 //     <article className="Book">
-//       <img src={props.image} alt={props.title} />
-//       <h2>{props.title}</h2>
-//       <h4>{props.author}</h4>
+//       <img src={image} alt={title} />
+//       <h2>{title}</h2>
+//       <h4>{author}</h4>
+//       {children}
 //     </article>
 //   );
 // };
 
-// destructuring in props
-const Book = (props) => {
-  // const Book = ({ image, title, author }) => { return ()
-  const { image, title, author, children } = props;
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<BookList />);
+
+//simple list
+const books = [
+  {
+    image: "./Images/Book-1.jpg",
+    title: "Gopi Diaries: Coming Home ",
+    author: "Sudha Moorthy",
+  },
+  {
+    image: "https://m.media-amazon.com/images/I/51t6lNaTw5L._SY445_SX342_.jpg",
+    title: "The fowl twins ",
+    author: "Eion colfer",
+  },
+];
+const BookList = () => {
+  return (
+    <section className="BookList">
+      {Books.map(() => {
+        const { image, title, author } = book;
+        return <Book img={image} title={title} author={author} />;
+      })}
+    </section>
+  );
+};
+
+const Book = ({ image, title, author }) => {
   return (
     <article className="Book">
       <img src={image} alt={title} />
@@ -110,5 +148,3 @@ const Book = (props) => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList />);
-
-//simple list
