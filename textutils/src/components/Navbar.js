@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -28,7 +28,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                About
+                {props.Abouttext}
               </a>
             </li>
           </ul>
@@ -48,3 +48,5 @@ export default function Navbar() {
     </nav>
   );
 }
+Navbar.prototypes = { title: PropTypes.string, Abouttext: PropTypes.string };
+Navbar.defaultProps = { title: "title", Abouttext: "about" };
