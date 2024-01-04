@@ -27,7 +27,7 @@ import axios from "axios";
 export default function Useeffect() {
   const [data, setdata] = useState(0);
   useEffect(() => {
-    axios.get("https://dummyjson.com/posts/add").then((response) => {
+    axios.get("//dummyjson.com/test").then((response) => {
       console.log(response.data);
     });
   });
