@@ -39,7 +39,7 @@ export default function UseReducer() {
 
   return (
     <div>
-      <h1>UseReducer</h1>
+      <h1>useReducer</h1>
       <h4>{state.count}</h4>
       <button
         onClick={() => {
