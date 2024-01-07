@@ -1,6 +1,13 @@
-import React from "react";
+import React, { createContext } from "react";
+import B from "./B";
 
-const A = (name) => {
-  return <h1>Hi name={"apoo"}</h1>;
-};
-export default A;
+const Biodata = createContext(null);
+
+export default function A() {
+  return (
+    <Biodata.Provider value={"apoo"}>
+      <B />
+    </Biodata.Provider>
+  );
+}
+export { Biodata };

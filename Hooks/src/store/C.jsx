@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Biodata } from "./A";
 
-const C = (name) => {
-  return <h1>Hi {name}</h1>;
-};
-export default C;
+export default function C() {
+  const context = useContext(Biodata);
+  return <div>Hi {context}</div>;
+}

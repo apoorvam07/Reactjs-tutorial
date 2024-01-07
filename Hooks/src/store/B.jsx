@@ -1,6 +1,10 @@
 import React from "react";
+import C from "./C";
 
-const B = (name) => {
-  return <h1>Hi {name}</h1>;
-};
-export default B;
+export default function B() {
+  return (
+    <div>
+      <C />
+    </div>
+  );
+}
