@@ -26,16 +26,19 @@ import React, { useReducer } from "react";
 const reducer = (state, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return { count: state.count + 1, showText: stateshowText };
+      return { count: state.count + 1, showText: state.showText };
     case "toggleshowText":
-      return { count: state.count, showText: !stateshowText };
+      return { count: state.count, showText: !state.showText };
     default:
       return state;
   }
 };
 
 export default function UseReducer() {
-  const [state, dispatch] = useReducer(reducer, { count: 0, showText: true });
+  const [state, dispatch] = useReducer(reducer, {
+    count: 0,
+    toggleshowText: true,
+  });
 
   return (
     <div>
