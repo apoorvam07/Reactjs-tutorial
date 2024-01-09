@@ -10,6 +10,7 @@ export default function MyForm() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Forms</h1>
       <label>
         Enter your name:
         <input
@@ -20,6 +21,7 @@ export default function MyForm() {
       </label>
       <input type="submit" />
       <h3>Welcome {name}</h3>
+      <hr />
     </form>
   );
 }

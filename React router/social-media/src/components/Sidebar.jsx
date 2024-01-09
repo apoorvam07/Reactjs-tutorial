@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Sidebar({ }) {
+export default function Sidebar({}) {
   return (
     <>
       <div
@@ -19,41 +19,24 @@ export default function Sidebar({ }) {
         </a>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
-          <li
-            className="nav-item"
-            >
-            <Link to="/createpost"
-              className={`nav-link text-white `}
-              aria-current="page"
-            >
+          <li className="nav-item">
+            <Link to="/" className={`nav-link text-white `} aria-current="page">
               <svg className="bi pe-none me-2" width="16" height="16">
                 <use xlinkHref="#home"></use>
               </svg>
               Home
             </Link>
           </li>
-          <li
-            onClick={() => {
-              setselectedTab("Create Post");
-            }}
-          >
-            <a
-              href="#"
-              className={`nav-link text-white ${
-                selectedTab === "Create Post" && "active"
-              }`}
-            >
+          <li>
+            <Link to="/createpost" className="nav-link text-white ">
               <svg className="bi pe-none me-2" width="16" height="16">
                 <use xlinkHref="#speedometer2"></use>
               </svg>
               Create Post
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
-              className={`nav-link text-white `}
-            >
+            <a href="#" className={`nav-link text-white `}>
               <svg className="bi pe-none me-2" width="16" height="16">
                 <use xlinkHref="#table"></use>
               </svg>
@@ -61,12 +44,7 @@ export default function Sidebar({ }) {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              className={`nav-link text-white ${
-                selectedTab === "Friends" && "active"
-              }`}
-            >
+            <a href="#" className="nav-link text-white">
               <svg className="bi pe-none me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
@@ -74,12 +52,7 @@ export default function Sidebar({ }) {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              className={`nav-link text-white ${
-                selectedTab === "Settings" && "active"
-              }`}
-            >
+            <a href="#" className="nav-link text-white">
               <svg className="bi pe-none me-2" width="16" height="16">
                 <use xlinkHref="#people-circle"></use>
               </svg>

@@ -12,6 +12,7 @@ const Usecontext = () => {
       <h1>useContext</h1>
       <Login />
       <User />
+      <hr />
     </Appdata.Provider>
   );
 };

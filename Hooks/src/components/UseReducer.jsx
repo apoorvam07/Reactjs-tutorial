@@ -53,7 +53,7 @@ export default function UseReducer() {
         click here..
       </button>
       {state.showText && <p>Hi</p>}
-      <hr />;
+      <hr />
     </div>
   );
 }

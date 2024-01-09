@@ -6,6 +6,7 @@ import Useeffect from "./components/Useeffect";
 import UseRef from "./components/UseRef";
 import A from "./store/A";
 import Usecontext from "./store/Usecontext";
+import Usecallback from "./components/Usecallback";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <UseState />
       <Useeffect />
       <UseReducer />
-      <UseMemo />
       <UseRef />
       <Usecontext />
       <A />
+      <UseMemo />
+      <Usecallback />
     </>
   );
 }
