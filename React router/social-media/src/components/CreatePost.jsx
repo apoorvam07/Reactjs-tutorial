@@ -87,9 +87,7 @@ export async function createPostAction(data) {
   fetch("https://dummyjson.com/posts/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      postData,
-    }),
+    body: JSON.stringify(postData),
   })
     .then((res) => res.json())
     .then((post) => {
