@@ -6,7 +6,7 @@ const Biodata = createContext(null);
 export default function A() {
   return (
     <Biodata.Provider value={"apoo"}>
-      <h1>useContext</h1>
+      <h1>useContext ex 2</h1>
       <B />
       <hr />
     </Biodata.Provider>

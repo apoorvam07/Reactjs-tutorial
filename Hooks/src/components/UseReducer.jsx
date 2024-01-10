@@ -20,6 +20,7 @@
 //     </div>
 //   );
 // }
+//above function can be written using usereducers as below:
 
 import React, { useReducer } from "react";
 

@@ -1,6 +1,8 @@
 import React, { createContext, useState } from "react";
+import A from "./A";
 import Login from "./Login";
 import User from "./User";
+import { Outlet } from "react-router-dom";
 
 const Appdata = createContext();
 
@@ -13,6 +15,8 @@ const Usecontext = () => {
       <Login />
       <User />
       <hr />
+      <Outlet />
+      <A />
     </Appdata.Provider>
   );
 };
